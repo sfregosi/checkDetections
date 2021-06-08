@@ -1,0 +1,29 @@
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config file
+Desktop.ini
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# MATLAB
+# =========================
+
+# autosave extension
+*.asv
+
+# data files
+*.mat
+
+# config files
+*.cnf
