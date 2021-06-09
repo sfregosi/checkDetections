@@ -1,10 +1,11 @@
-%%%%%%%%%%%% Seaglider SG639 in Gulf of Mexico, May-June 2018 %%%%%%%%%%%%
+%%%%%%%%%%%% Example checkDetections config file %%%%%%%%%%%%
+% originally made for Seaglider SG639 in Gulf of Mexico, May-June 2018 %
 
 timeIncr = 1 / (24*60*60);	% check every detections
 % timeIncr = 1;			% check one detection per day
 
-% Sound files and index:
-snddir = 'G:\GoMex2018\wav\sg639-10kHz\'; % raw sound dir
+% Sound files and index file:
+snddir = 'G:\GoMex2018\wav\sg639-10kHz\'; % dir containing raw wavs (or flacs?)
 indexpath = [snddir 'file_dates-GoMex_2018_sg639.txt']; %fileDates File 
    % if you don't have one of these, make it with XXXXXXXXXXXXXX
 
