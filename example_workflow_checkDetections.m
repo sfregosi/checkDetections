@@ -10,11 +10,16 @@
 addpath(genpath('C:\Users\Selene.Fregosi\Documents\MATLAB\checkDetections\'))
 addpath(genpath('C:\Users\Selene.Fregosi\Documents\MATLAB\osprey\'))
 
-% Make a config file with info on what exactly to plot
-% see checkDetConfig folder for example (exampleConfig_spermWhales.m) and
-% store saved config file in that folder
+% Make a config file with info on:
+    % paths to sound and log files
+    % time and frequency plotting settings
+    % which detections to view
+    % see checkDetConfig folder for example (exampleConfig_spermWhales.m)
 edit exampleConfig_spermWhales
+% store saved config file in checkDetConfig folder 
 
+% run checkDetections
+checkDetections exampleConfig_spermWhales
 % %% Manual checking of detections
 % addpath(genpath('H:\GoMex2018\noiseDetector\code\'))
 % 
