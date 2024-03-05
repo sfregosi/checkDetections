@@ -15,18 +15,18 @@
 % makeCheckArray.m.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- Set up what data to check. After configuration, you should have these 
- variables defined: 
-   datesfilename	an index file as created by makeHarufileDateIndex
-   inlogname		a detection log (see readDetLog)
-   outlogname		an output file (readable text) with results
-   hrsfilename		an output file (.mat) with results; also gets read in 
-			if you are restarting checking
-   datadir		where to find the sound files
-   dirTranslations	use only if sound files are in a different directory
-			now than what's in the log or index file
-   dispFreqs [1x2]	frequency range to display in Osprey, Hz
-   padTime [1x2]	extra time displayed in Osprey before/after detection, s
+% Set up what data to check. After configuration, you should have these 
+% variables defined: 
+%   datesfilename	an index file as created by makeHarufileDateIndex
+%   inlogname		a detection log (see readDetLog)
+%   outlogname		an output file (readable text) with results
+%   hrsfilename		an output file (.mat) with results; also gets read in 
+%			if you are restarting checking
+%   datadir		where to find the sound files
+%   dirTranslations	use only if sound files are in a different directory
+%			now than what's in the log or index file
+%   dispFreqs [1x2]	frequency range to display in Osprey, Hz
+%   padTime [1x2]	extra time displayed in Osprey before/after detection, s
 
 
 area = 'ETP';
