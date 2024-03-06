@@ -31,13 +31,13 @@
 
 % area = 'MHI';
 % loc = 'sg679';
-% yr = 'May2024';
-mission = 'sg679_MHI_May2024';
+% yr = 'May2023';
+mission = 'sg679_MHI_May2023';
 dispFreqs = [0 20000];	% freq range to display in Osprey
 padTime = [0 -2700];	% extra time displayed in Osprey before/after detection
 
 indexdir = 'D:\sg679_MHI_May2023\recordings\wav_gain_adjusted\';
-logdir  = 'D:\analysis\checkMissedCalls\';
+logdir  = 'D:\analysis\spermWhales\';
 datadir = 'D:\sg679_MHI_May2023\recordings\wav_gain_adjusted\';
 %
 % This is for fixing directory names that appear in the detection logs or 
@@ -68,7 +68,7 @@ hrsfilename   = fullfile(logdir, [mission '-checkMisses.mat']);
 % Read index file to get date of each sound file, and detection log file.
 hIndex = readHarufileDateIndex(datesfilename);
 disp(['Reading detection log ' inlogname ' ...'])
-[t0,dummy1,soundfiles,eff] = readDetLog(inlogname, hIndex);
+[t0,dummy1,soundfiles,eff] = readDetLog(inlogname, hIndex, '$enc');
 % t0 has [start end] cols, in datenum format.  eff is [start end].
 
 % hrs is a Nx24 array with one entry per hour:
