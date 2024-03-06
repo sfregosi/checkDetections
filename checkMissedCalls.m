@@ -29,15 +29,16 @@
 %   padTime [1x2]	extra time displayed in Osprey before/after detection, s
 
 
-area = 'ETP';
-loc = 'SW';
-yr = 'Nov99';
-dispFreqs = [0 50];	% freq range to display in Osprey
+% area = 'MHI';
+% loc = 'sg679';
+% yr = 'May2024';
+mission = 'sg679_MHI_May2024';
+dispFreqs = [0 20000];	% freq range to display in Osprey
 padTime = [0 -2700];	% extra time displayed in Osprey before/after detection
 
-indexdir = ['C:\Dave\airguns\' area '\'];
-logdir  = ['C:\Dave\airguns\' area '\'];
-datadir = '\\back40\hdd1\EPR\Nov99-Nov00\08s110w\';
+indexdir = 'D:\sg679_MHI_May2023\recordings\wav_gain_adjusted\';
+logdir  = 'D:\analysis\checkMissedCalls\';
+datadir = 'D:\sg679_MHI_May2023\recordings\wav_gain_adjusted\';
 %
 % This is for fixing directory names that appear in the detection logs or 
 % index file. Set this to {} if the sound files haven't moved.
@@ -49,12 +50,18 @@ datadir = '\\back40\hdd1\EPR\Nov99-Nov00\08s110w\';
 %    '\\Thefarm\EPR\'
 %    '\\Back40\hdd1\EPR\'
 %    };
-%
-locyr         = [loc '-' yr];
-datesfilename = [indexdir 'file_dates-' locyr '.txt'];
-inlogname     = [logdir area '-' locyr '.log'];
-outlogname    = [logdir area '-' locyr '-checkMisses.log'];
-hrsfilename   = [logdir area '-' locyr '-checkMisses.mat'];
+
+
+% locyr         = [loc '-' yr];
+% datesfilename = [indexdir 'file_dates-' locyr '.txt'];
+% inlogname     = [logdir area '-' locyr '.log'];
+% outlogname    = [logdir area '-' locyr '-checkMisses.log'];
+% hrsfilename   = [logdir area '-' locyr '-checkMisses.mat'];
+
+datesfilename = fullfile(indexdir, ['file_dates-' mission '.txt']);
+inlogname     = fullfile(logdir, 'encounter_dets-230510_055705.csv');
+outlogname    = fullfile(logdir, [mission '-checkMisses.log']);
+hrsfilename   = fullfile(logdir, [mission '-checkMisses.mat']);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
